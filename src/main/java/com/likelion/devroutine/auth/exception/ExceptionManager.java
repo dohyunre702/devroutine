@@ -1,4 +1,4 @@
-package com.likelion.devroutine.exception;
+package com.likelion.devroutine.auth.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

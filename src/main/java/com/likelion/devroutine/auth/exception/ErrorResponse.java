@@ -1,4 +1,4 @@
-package com.likelion.devroutine.exception;
+package com.likelion.devroutine.auth.exception;
 
 import lombok.Getter;
 
