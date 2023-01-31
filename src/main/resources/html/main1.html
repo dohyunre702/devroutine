@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!--로그인o-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Main</title>
+</head>
+<body>
+<nav th:fragment="navbarFragment" class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DevRoutine</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div style="float: left" class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" th:href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th::href="/challenges">Challenge</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="/mypage">MyPage</a>
+        </li>
+      </ul>
+    </div>
+    <div style="float: right" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" th:href="/alarm">
+            <img src="/static/assets/img/alarm.png" witdh="20" height="20"/></a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary">Login</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- 인삿말 -->
+<div style="margin-left: 20px; margin-top: 15px;">
+  <h1>안녕하세요, 00님!</h1>
+  <h1>좋은 아침이에요 :)</h1>
+</div>
+<!-- 나의 챌린지 / 로그인시 뺄 부분 -->
+<div style="margin-left: 20px;">
+  <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 5px;">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" data-bs-toggle="tab" href="#mychallenge" aria-selected="true" role="tab">나의 챌린지</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" data-bs-toggle="tab" href="#followingchallenge" aria-selected="false" role="tab" tabindex="-1">팔로잉한 챌린지</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active show" id="mychallenge" role="tabpanel" style="flex: auto">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto">
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="followingchallenge" role="tabpanel">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Primary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--곧 마감하는 챌린지-->
+<div style="margin-left: 20px;">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" data-bs-toggle="tab" href="#home" aria-selected="false" role="tab" tabindex="-1">곧 마감하는 챌린지</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" data-bs-toggle="tab" href="#profile" aria-selected="true" role="tab">인기 챌린지</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="home" role="tabpanel">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade active show" id="profile" role="tabpanel">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
