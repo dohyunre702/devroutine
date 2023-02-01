@@ -1,7 +1,10 @@
-package com.likelion.devroutine.like.domain;
+package com.likelion.devroutine.likes.domain;
 
+import com.likelion.devroutine.certification.domain.Certification;
+import com.likelion.devroutine.user.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -12,18 +15,23 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Like {
+public class Likes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long user_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "certification_id")
+    Certification certification;
 
-    private Long certification_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name ="user_id")
+    User user;
 
     @Column(nullable = false)
     @CreatedDate
@@ -31,4 +39,14 @@ public class Like {
 
     @LastModifiedDate
     private LocalDateTime modifiedAt;
+
+    public static Likes of(User user, Certification certification) {
+        Likes likes = Likes.builder()
+                .user(user)
+                .certification(certification)
+                .build();
+
+        return likes;
+    }
+
 }
