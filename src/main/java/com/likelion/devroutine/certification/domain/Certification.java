@@ -1,5 +1,6 @@
 package com.likelion.devroutine.certification.domain;
 
+import com.likelion.devroutine.participant.domain.Participation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,7 +24,9 @@ public class Certification {
 
     String image_url;
 
-    Long challenge_detail_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "participation_id")
+    Participation participation;
 
     @Column(nullable = false)
     @CreatedDate
