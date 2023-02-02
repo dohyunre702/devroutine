@@ -56,6 +56,9 @@ public class LikesService {
     }
 
     public boolean match(Certification certification, User user) {
+        //챌린지에 참여하는 사람만 할 수 있게 한다. (?)
+        //로그인하는 사람 모두가 할 수 있다. (v)
+        //회원가입하지 않아도 모두가 할 수 있다. (x)
         if (!user.getId().equals(certification.getParticipation().getUser().getId())) {
             throw new DuplicatedLikesException();
         }
