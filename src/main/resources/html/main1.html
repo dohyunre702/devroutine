@@ -53,9 +53,50 @@
       <a class="nav-link" data-bs-toggle="tab" href="#followingchallenge" aria-selected="false" role="tab" tabindex="-1">팔로잉한 챌린지</a>
     </li>
   </ul>
+  <div id="TabContent" class="tab-content">
+    <div class="tab-pane fade active show" id="challenge" role="tabpanel"  style="display: flex;">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto; margin-right: 20px;" >
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>1/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto; margin-right: 20px;">
+        <div class="card-header">챌린지 사진</div>
+        <div class="card-body">
+          <h4 class="card-title">챌린지 제목</h4>
+          <p class="card-text">챌린지 내용</p>
+          <h2>2/7</h2> <!-- 옆으로 붙이기 -->
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="followchallenge" role="tabpanel">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Primary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--곧 마감하는 챌린지-->
+<div style="margin-left: 20px;">
+  <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 5px; ">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" data-bs-toggle="tab" href="#home" aria-selected="false" role="tab" tabindex="-1">곧 마감하는 챌린지</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" data-bs-toggle="tab" href="#profile" aria-selected="true" role="tab">인기 챌린지</a>
+    </li>
+  </ul>
+  <div>
   <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active show" id="mychallenge" role="tabpanel" style="flex: auto">
-      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
+    <div class="tab-pane fade active show" id="mychallenge" role="tabpanel"  style="display: flex;">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto; margin-right: 20px;" >
         <div class="card-header">챌린지 사진</div>
         <div class="card-body">
           <h4 class="card-title">챌린지 제목</h4>
@@ -63,12 +104,12 @@
           <h2>3/7</h2> <!-- 옆으로 붙이기 -->
         </div>
       </div>
-      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto">
+      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto; margin-right: 20px;">
         <div class="card-header">챌린지 사진</div>
         <div class="card-body">
           <h4 class="card-title">챌린지 제목</h4>
           <p class="card-text">챌린지 내용</p>
-          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
+          <h2>4/7</h2> <!-- 옆으로 붙이기 -->
         </div>
       </div>
     </div>
@@ -82,46 +123,6 @@
       </div>
     </div>
   </div>
-</div>
-<!--곧 마감하는 챌린지-->
-<div style="margin-left: 20px;">
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" data-bs-toggle="tab" href="#home" aria-selected="false" role="tab" tabindex="-1">곧 마감하는 챌린지</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link active" data-bs-toggle="tab" href="#profile" aria-selected="true" role="tab">인기 챌린지</a>
-    </li>
-  </ul>
-  <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade" id="home" role="tabpanel">
-      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
-        <div class="card-header">챌린지 사진</div>
-        <div class="card-body">
-          <h4 class="card-title">챌린지 제목</h4>
-          <p class="card-text">챌린지 내용</p>
-          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane fade active show" id="profile" role="tabpanel">
-      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
-        <div class="card-header">챌린지 사진</div>
-        <div class="card-body">
-          <h4 class="card-title">챌린지 제목</h4>
-          <p class="card-text">챌린지 내용</p>
-          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
-        </div>
-      </div>
-      <div class="card border-primary mb-3" style="max-width: 20em; flex: auto" >
-        <div class="card-header">챌린지 사진</div>
-        <div class="card-body">
-          <h4 class="card-title">챌린지 제목</h4>
-          <p class="card-text">챌린지 내용</p>
-          <h2>3/7</h2> <!-- 옆으로 붙이기 -->
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 </body>
